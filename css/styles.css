@@ -1,0 +1,24 @@
+.column {
+  background-color: red;
+}
+
+.background-gif {
+  background: gray;
+}
+
+.view-agents {
+  background-color: red;
+  color: white;
+}
+
+.row {
+  display: flex;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+column-full {
+  flex-basis: 100%;
+}
