@@ -1,9 +1,15 @@
-.column {
-  background-color: red;
+.row-1 {
+  background-color: black;
+  color: white;
+}
+
+.gif {
+  width: 60%;
 }
 
 .background-gif {
   background: gray;
+  color: white;
 }
 
 .view-agents {
@@ -11,14 +17,25 @@
   color: white;
 }
 
-.row {
-  display: flex;
+.agents-button {
+  background-color: white;
 }
 
-.column-half {
-  flex-basis: 50%;
+.maps-button {
+  background-color: red;
+  color: white;
+  border: none;
 }
 
-column-full {
-  flex-basis: 100%;
+img {
+  width: 100%;
+}
+
+button {
+  padding: 1rem;
+}
+
+button:hover {
+  background-color: black;
+  transition: 1s ease-out;
 }
