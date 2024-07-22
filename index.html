@@ -1,20 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJAX Project</title>
-  <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <header>
-  </header>
-  <main>
-  </main>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Project</title>
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="row">
+      <div class="col">
+        <h2>riot games</h2>
+      </div>
+      <div class="col">
+        <h2>logo</h2>
+      </div>
+    </header>
+    <main>
+      <div class="row">
+        <div class="col">
+          <!-- <img src alt="gif" /> -->
+        </div>
+        <div class="col"></div>
+      </div>
+
+      <!-- Learn More -->
+      <div
+        class="first-box row margin-left-1 margin-right-1 margin-top-4 hidden">
+        <div class="first-header">
+          <div class="col">
+            <h1>WE ARE VALORANT</h1>
+          </div>
+        </div>
+        <div class="first-info margin-right-6">
+          <div class="col">
+            <h5>DEFY THE LIMITS</h5>
+            <p>
+              Blend your style and experience on a global, competitive stage.
+              You have 13 rounds to attack and defend your side using sharp
+              gunplay and tactical abilities. And, with one life per-round,
+              you'll need to think faster than your opponent if you want to
+              survive. Take on foes across Competitive and Unranked modes as
+              well as Deathmatch and Spike Rush.
+            </p>
+          </div>
+        </div>
+        <div class="first-button margin-bottom-1">
+          <div class="col">
+            <button type="button" class="learn-button">LEARN THE GAME</button>
+          </div>
+        </div>
+        <div class="first-gif margin-bottom-3">
+          <div class="col">
+            <img
+              src="images/valorant-gif-1.gif"
+              alt="valorant-gif"
+              class="first-pic" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Agents -->
+      <div class="second-box background-red white-font row hidden">
+        <div class="second-header margin-top-4 margin-left-1">
+          <div class="col">
+            <h1>YOUR AGENTS</h1>
+          </div>
+        </div>
+        <div class="second-info margin-left-1 margin-right-6">
+          <div class="col background-red white-font">
+            <h5>CREATIVITY IS YOUR GREATEST WEAPON.</h5>
+            <p>
+              More than guns and bullets, you’ll choose an Agent armed with
+              adaptive, swift, and lethal abilities that create opportunities to
+              let your gunplay shine. No two Agents play alike, just as no two
+              highlight reels will look the same.
+            </p>
+          </div>
+        </div>
+        <div class="second-button margin-left-1">
+          <div class="col background-red">
+            <button type="button" class="agent-button">VIEW ALL AGENTS</button>
+          </div>
+        </div>
+        <div class="second-gif margin-bottom-3">
+          <div class="col">
+            <img
+              src="images/valorant-pic-1.avif"
+              alt="valorant-pic"
+              class="second-pic" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Maps -->
+      <div
+        class="third-box row margin-top-4 margin-left-1 margin-right-1 margin-bottom-3 hidden">
+        <div class="third-header">
+          <div class="col">
+            <h1>YOUR MAPS</h1>
+          </div>
+        </div>
+        <div class="third-info margin-right-6">
+          <div class="col">
+            <h5>FIGHT AROUND THE WORLD</h5>
+            <p>
+              Each map is a playground to showcase your creative thinking.
+              Purpose-built for team strategies, spectacular plays, and clutch
+              moments. Make the play others will imitate for years to come.
+            </p>
+          </div>
+        </div>
+        <div class="third-button margin-bottom-1">
+          <div class="col">
+            <button type="button" class="maps-button">VIEW ALL MAPS</button>
+          </div>
+        </div>
+        <div class="third-gif">
+          <div class="col">
+            <img
+              src="images/valorant-pic-2.webp"
+              alt="map-pic"
+              class="third-pic" />
+          </div>
+        </div>
+      </div>
+      <div class="agent-page row hidden">
+        <div class="agent-header row">
+          <div class="col">
+            <h1 class="margin-left-1 white">AGENTS</h1>
+          </div>
+        </div>
+        <div class="agent-list"></div>
+        <!-- appending agents here -->
+      </div>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

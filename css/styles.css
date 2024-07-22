@@ -1,0 +1,49 @@
+.learn-button,
+.maps-button {
+  background-color: red;
+  color: white;
+  border: none;
+  height: 4rem;
+  width: 10rem;
+}
+
+.agent-button {
+  background-color: black;
+  color: white;
+  border: none;
+  height: 4rem;
+  width: 10rem;
+}
+
+.background-red {
+  background-color: rgb(253, 67, 84);
+}
+
+.white-font {
+  color: rgb(236, 232, 225);
+}
+
+.learn-button:hover,
+.maps-button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.agent-button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.first-pic,
+.second-pic,
+.third-pic {
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
