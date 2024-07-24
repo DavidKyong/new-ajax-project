@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
     <header class="row">
       <div class="col">
@@ -21,13 +22,22 @@
     <main>
       <div class="row">
         <div class="col">
+
+          <!-- <img src alt="gif" /> -->
+
           <img src alt="gif" />
+
         </div>
         <div class="col"></div>
       </div>
 
       <!-- Learn More -->
+
+      <div
+        class="first-box row margin-left-1 margin-right-1 margin-top-4 hidden">
+
       <div class="first-box row margin-left-1 margin-right-1 margin-top-4">
+
         <div class="first-header">
           <div class="col">
             <h1>WE ARE VALORANT</h1>
@@ -53,8 +63,11 @@
         </div>
         <div class="first-gif margin-bottom-3">
           <div class="col">
-            <img
+
+              src="images/valorant-gif-1.gif"
+
               src="images/valorant-gif.webp"
+
               alt="valorant-gif"
               class="first-pic" />
           </div>
@@ -62,7 +75,11 @@
       </div>
 
       <!-- Agents -->
+
+      <div class="second-box background-red white-font row hidden">
+
       <div class="second-box background-red white-font row">
+
         <div class="second-header margin-top-4 margin-left-1">
           <div class="col">
             <h1>YOUR AGENTS</h1>
@@ -96,7 +113,11 @@
 
       <!-- Maps -->
       <div
+
+        class="third-box row margin-top-4 margin-left-1 margin-right-1 margin-bottom-3 hidden">
+
         class="third-box row margin-top-4 margin-left-1 margin-right-1 margin-bottom-3">
+
         <div class="third-header">
           <div class="col">
             <h1>YOUR MAPS</h1>
@@ -126,6 +147,19 @@
           </div>
         </div>
       </div>
+
+      <div class="agent-page row hidden">
+        <div class="agent-header row">
+          <div class="col">
+            <h1 class="margin-left-1 white">AGENTS</h1>
+          </div>
+        </div>
+        <div class="agent-list"></div>
+        <!-- appending agents here -->
+      </div>
+      <!-- appending maps here -->
+      <div class="map-page margin-left-1 margin-right-1"></div>
+
     </main>
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
