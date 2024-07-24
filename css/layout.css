@@ -1,3 +1,6 @@
+.hidden {
+  display: none;
+}
 
 .row {
   display: flex;
@@ -24,11 +27,21 @@
   margin-bottom: 3rem;
 }
 
+.margin-top-1 {
+  margin-top: 1rem;
+}
+
+.margin-top-2 {
+  margin-top: 2rem;
+}
 
 .margin-top-4 {
   margin-top: 4rem;
 }
 
+.margin-right-4 {
+  margin-right: 4rem;
+}
 
 @media screen and (min-width >= 575px) {
   .first-header,
@@ -43,4 +56,80 @@
   .first-button {
     width: 50%;
   }
+}
+
+.row-agent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.agent-image {
+  padding: 0.75rem;
+  width: 100%;
+}
+
+.agent-col-half {
+  flex-basis: calc(50%);
+}
+
+.agent-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(26, 36, 46);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.agent-page {
+  background-color: rgb(15, 24, 34);
+  color: rgb(236, 232, 225);
+}
+
+.ability-wrapper {
+  display: flex;
+}
+
+.ability-image {
+  width: 50%;
+}
+
+/* map page layout */
+
+.map-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.extra-map-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* learn page layout */
+
+.learn-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
