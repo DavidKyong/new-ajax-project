@@ -1,3 +1,16 @@
+/* header styles */
+.valorant-logo {
+  width: 5rem;
+}
+
+.valorant-logo:hover {
+  cursor: pointer;
+}
+
+.background-black {
+  background-color: rgb(20, 28, 40);
+}
+
 .learn-button,
 .maps-button {
   background-color: red;
