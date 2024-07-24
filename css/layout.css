@@ -27,6 +27,14 @@
   margin-bottom: 3rem;
 }
 
+.margin-top-1 {
+  margin-top: 1rem;
+}
+
+.margin-top-2 {
+  margin-top: 2rem;
+}
+
 .margin-top-4 {
   margin-top: 4rem;
 }
@@ -59,6 +67,7 @@
 
 .agent-image {
   padding: 0.75rem;
+  width: 100%;
 }
 
 .agent-col-half {
@@ -81,7 +90,11 @@ ul {
 }
 
 li {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 p {
@@ -93,10 +106,22 @@ p {
   color: rgb(236, 232, 225);
 }
 
-.ability-image {
-  width: 5rem;
-}
-
 .ability-wrapper {
   display: flex;
+}
+
+.ability-image {
+  width: 50%;
+}
+
+/* map page layout */
+
+.map-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.extra-map-wrapper {
+  display: flex;
+  justify-content: space-between;
 }

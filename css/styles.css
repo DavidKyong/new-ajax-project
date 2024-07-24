@@ -47,3 +47,12 @@
 li {
   list-style-type: none;
 }
+
+/* map page styles */
+.map-image {
+  width: 100%;
+}
+
+.extra-map-image {
+  width: 15rem;
+}
