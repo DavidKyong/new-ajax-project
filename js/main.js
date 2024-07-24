@@ -1,3 +1,4 @@
+const $learnButton = document.querySelector('.learn-button');
 const $agentButton = document.querySelector('.agent-button');
 const $mapButton = document.querySelector('.maps-button');
 const $firstBox = document.querySelector('.first-box');
@@ -6,31 +7,47 @@ const $thirdBox = document.querySelector('.third-box');
 const $agentPage = document.querySelector('.agent-page');
 const $agentList = document.querySelector('.agent-list');
 const $mapPage = document.querySelector('.map-page');
+const $learnPage = document.querySelector('.learn-page');
 
-let agentApiCall = {
-  count: 0,
-  data: {},
-};
+// $agentButton.addEventListener('click', () => {
+//   agentPage();
+//   callAgents();
+// });
 
-$agentButton.addEventListener('click', () => {
-  agentPage();
-  callAgents();
-  callMaps();
+$learnButton.addEventListener('click', () => {
+  learnPage();
 });
 
 $mapButton.addEventListener('click', () => {
+  callMaps();
+  mapPage();
+});
+
+function learnPage() {
   $firstBox.className = 'hidden';
   $secondBox.className = 'hidden';
   $thirdBox.className = 'hidden';
+  $learnPage.className = 'learn-page margin-right-1 margin-left-1';
   $agentPage.className = 'hidden';
-  callMaps();
-});
+  $mapPage.className = 'hidden';
+}
 
 function agentPage() {
   $firstBox.className = 'hidden';
   $secondBox.className = 'hidden';
   $thirdBox.className = 'hidden';
+  $learnPage.className = 'hidden';
   $agentPage.className = 'agent-page';
+  $mapPage.className = 'hidden';
+}
+
+function mapPage() {
+  $firstBox.className = 'hidden';
+  $secondBox.className = 'hidden';
+  $thirdBox.className = 'hidden';
+  $learnPage.className = 'hidden';
+  $agentPage.className = 'hidden';
+  $mapPage.className = 'map-page margin-right-1 margin-left-1';
 }
 
 function callMaps() {

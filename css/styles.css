@@ -43,3 +43,23 @@
 .third-pic {
   width: 100%;
 }
+
+li {
+  list-style-type: none;
+}
+
+/* map page styles */
+.map-image {
+  width: 100%;
+}
+
+.extra-map-image {
+  width: 15rem;
+  height: 12rem;
+}
+
+/* learn page style */
+
+.learn-pic {
+  width: 50rem;
+}
