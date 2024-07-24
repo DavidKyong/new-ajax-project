@@ -1,3 +1,4 @@
+const $logo = document.querySelector('.valorant-logo');
 const $learnButton = document.querySelector('.learn-button');
 const $agentButton = document.querySelector('.agent-button');
 const $mapButton = document.querySelector('.maps-button');
@@ -8,6 +9,17 @@ const $agentPage = document.querySelector('.agent-page');
 const $agentList = document.querySelector('.agent-list');
 const $mapPage = document.querySelector('.map-page');
 const $learnPage = document.querySelector('.learn-page');
+
+$logo.addEventListener('click', () => {
+  $firstBox.className =
+    'first-box row margin-left-1 margin-right-1 margin-top-2';
+  $secondBox.className = 'second-box background-red white-font row';
+  $thirdBox.className =
+    'third-box row margin-top-4 margin-left-1 margin-right-1 margin-bottom-3';
+  $learnPage.className = 'learn-page margin-right-1 margin-left-1 hidden';
+  $agentPage.className = 'agent-page row hidden';
+  $mapPage.className = 'map-page margin-left-1 margin-right-1 hidden';
+});
 
 // $agentButton.addEventListener('click', () => {
 //   agentPage();
