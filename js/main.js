@@ -75,11 +75,11 @@ function callMaps() {
       $extraMapOne.className = 'extra-map-image';
 
       const $extraMapTwo = document.createElement('img');
-      $extraMapTwo.setAttribute('src', mapData[i].premierBackgroundImage);
+      $extraMapTwo.setAttribute('src', mapData[i].stylizedBackgroundImage);
       $extraMapTwo.className = 'extra-map-image';
 
       const $extraMapThree = document.createElement('img');
-      $extraMapThree.setAttribute('src', mapData[i].listViewIcon);
+      $extraMapThree.setAttribute('src', mapData[i].listViewIconTall);
       $extraMapThree.className = 'extra-map-image';
 
       $extraMapWrapper.append($extraMapOne);
