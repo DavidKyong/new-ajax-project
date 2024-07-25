@@ -101,17 +101,8 @@ p {
   line-height: 1.5;
 }
 
-.agent-page {
-  background-color: rgb(15, 24, 34);
-  color: rgb(236, 232, 225);
-}
-
 .ability-wrapper {
   display: flex;
-}
-
-.ability-image {
-  width: 50%;
 }
 
 /* map page layout */
@@ -132,4 +123,14 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* agent page layout */
+
+.agent-wrapper {
+  display: flex;
+}
+
+.abilityWrapper {
+  display: flex;
 }
