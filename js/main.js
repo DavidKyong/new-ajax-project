@@ -21,10 +21,10 @@ $logo.addEventListener('click', () => {
   $mapPage.className = 'map-page margin-left-1 margin-right-1 hidden';
 });
 
-// $agentButton.addEventListener('click', () => {
-//   agentPage();
-//   callAgents();
-// });
+$agentButton.addEventListener('click', () => {
+  agentPage();
+  callAgents();
+});
 
 $learnButton.addEventListener('click', () => {
   learnPage();
@@ -125,76 +125,67 @@ function callMaps() {
   xhr.send();
 }
 
-// function callAgents() {
-//   const xhr = new XMLHttpRequest();
-//   xhr.open('GET', 'https://valorant-api.com/v1/agents');
-//   xhr.responseType = 'json';
-//   xhr.addEventListener('load', () => {
-//     const agentData = xhr.response.data;
-//     if (agentApiCall.count === 0) {
-//       agentApiCall.data = agentData;
-//       agentApiCall.count = 1;
-//     }
+function callAgents() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://valorant-api.com/v1/agents');
+  xhr.responseType = 'json';
+  xhr.addEventListener('load', () => {
+    const agentData = xhr.response.data;
+    for (let i = 0; i < agentData.length; i++) {
+      const $agentWrapper = document.createElement('div');
+      $agentWrapper.className = 'agent-wrapper';
 
-//     for (let i = 0; i < agentData.length; i++) {
-//       const agentName = agentData[i].displayName;
-//       const $agentName = document.createElement('h3');
-//       $agentName.textContent = `${agentName}`;
-//       $agentName.className = '';
+      // rendering agent name
+      const $agentNameWrapper = document.createElement('div');
+      $agentNameWrapper.className = 'agent-name';
 
-//       const $agentImage = document.createElement('img');
-//       $agentImage.setAttribute('src', agentData[i].displayIcon);
-//       $agentImage.className = `${agentName}-image agent-image`;
+      const $agentName = document.createElement('h4');
+      $agentName.textContent = agentData[i].displayName;
 
-//       const $imageWrapper = document.createElement('div');
-//       $imageWrapper.className = 'image-wrapper';
+      // rendering agent image
+      const $agentImageWrapper = document.createElement('div');
+      $agentImageWrapper.className = 'agent-image';
 
-//       const $agentWrapper = document.createElement('div');
-//       $agentWrapper.className = `${agentName}-wrapper agent-display`;
+      const $agentImage = document.createElement('img');
+      $agentImage.setAttribute('src', agentData[i].displayIcon);
 
-//       const $descriptionWrapper = document.createElement('div');
-//       $descriptionWrapper.className = 'description-wrapper';
+      // rendering agent description
+      const $agentDescriptionWrapper = document.createElement('div');
+      $agentDescriptionWrapper.className = 'agent-description';
 
-//       const $description = document.createElement('p');
-//       $description.className = 'agent-description margin-right-6';
-//       $description.textContent = agentData[i].description;
+      const $agentDescription = document.createElement('p');
+      $agentDescription.textContent = agentData[i].description;
 
-//       const $abilityTitle = document.createElement('p');
-//       $abilityTitle.className = 'ability-title margin-right-6';
-//       $abilityTitle.textContent = 'Abilities:';
+      $agentDescriptionWrapper.append($agentDescription);
 
-//       const $abilityWrapper = document.createElement('ul');
-//       $abilityWrapper.className = 'ability-wrapper';
+      // rendering agent abilities
+      const $abilityWrapper = document.createElement('div');
+      $abilityWrapper.className = 'abilityWrapper';
 
-//       for (let j = 0; j < agentData[i].abilities.length; j++) {
-//         const $abilities = document.createElement('li');
-//         $abilities.className = 'margin-right-4';
-//         $abilities.textContent = agentData[i].abilities[j].displayName;
+      $agentDescriptionWrapper.append($abilityWrapper);
 
-//         const $abilityImage = document.createElement('img');
-//         $abilityImage.setAttribute(
-//           'src',
-//           agentData[i].abilities[j].displayIcon,
-//         );
-//         $abilityImage.className = 'ability-image';
+      for (let j = 0; j < 4; j++) {
+        const $abilityImage = document.createElement('img');
+        $abilityImage.setAttribute(
+          'src',
+          agentData[i].abilities[j].displayIcon,
+        );
+        $abilityImage.className = 'ability-image';
+        $abilityWrapper.append($abilityImage);
+      }
+      $agentNameWrapper.append($agentName);
+      $agentNameWrapper.append($agentImageWrapper);
 
-//         $abilities.append($abilityImage);
-//         $abilityWrapper.append($abilities);
-//       }
+      $agentImageWrapper.append($agentImage);
 
-//       $imageWrapper.append($agentName);
-//       $imageWrapper.append($agentImage);
+      $agentDescriptionWrapper.append($agentDescription);
+      $agentDescriptionWrapper.append($abilityWrapper);
 
-//       $abilityTitle.append($abilityWrapper);
+      $agentWrapper.append($agentNameWrapper);
+      $agentWrapper.append($agentDescriptionWrapper);
 
-//       $descriptionWrapper.append($description);
-//       $descriptionWrapper.append($abilityTitle);
-
-//       $agentWrapper.append($imageWrapper);
-//       $agentWrapper.append($descriptionWrapper);
-
-//       $agentList.appendChild($agentWrapper);
-//     }
-//   });
-//   xhr.send();
-// }
+      $agentPage.append($agentWrapper);
+    }
+  });
+  xhr.send();
+}

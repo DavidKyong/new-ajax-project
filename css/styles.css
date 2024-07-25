@@ -76,3 +76,9 @@ li {
 .learn-pic {
   width: 50rem;
 }
+
+/* ability page style */
+.ability-image {
+  width: 10rem;
+  margin: 1rem;
+}
